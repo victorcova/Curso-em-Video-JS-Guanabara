@@ -4,20 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Primeiros passos com DOM</title>
     <style>
         body{
-            font: normal 20pt Arial;
-            color: blueviolet;
+            background-color: #2e5f8d;
+            font: normal 18pt Arial;
+            color: #f9f9f9;
         }
     </style>
 </head>
 <body>
+    <h1>Iniciando estudos com DOM</h1>
 
+    <p>Aqui vai o resultado</p>
+
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript </p>
+
+    <div id="msg" name="msg-name" class="mgs-class" >Clique em mim</div>
     
 
 <script>
+
+    // PEGANDO ELEMENTOS DOM PELA "MARCA" - getElementsByTagName()
+    var corpo = window.document.body;
+    corpo.style.background = 'black';
     
+    var p1 = document.getElementsByTagName('p')[1];
+
+    // innerText pega só o texto da filha sem formatação
+    window.document.write("Está escrito assim (INNERTEXT): "+ p1.innerText);
+    p1.style.color = 'blue';
+
+    // innerHtml pega o texto+formatação da filha
+    document.write('<br>Está escrito assim (INNERHTML):'+p1.innerHTML);
+
+    // PEGANDO ELEMENTO DOM PELO ID - getElementById() 
+    var d = document.getElementById('msg');
+    d.style.background = 'green';
+    d.innerText = 'Resposta: getElementById()'; // ou completo abaixo:
+    // window.document.getElementById('msg').innerText = 'Olá, mundo!';
+    // window.document.getElementById('msg').style.background = 'red';
+    
+
+    // PEGANDO ELEMENTOS DOM PELO NOME - getElementsByName()
+    var d = window.document.getElementsByName('msg-name')[0];
+    d.style.background = 'gray';
+    d.style.color = 'black';
+    d.innerText = 'Resposta: getElementsByTagName()';
+
+    // PEGANDO ELEMENTOS DOM PELA CLASSE - getElementByClassName() 
+    var d = window.document.getElementsByClassName('mgs-class')[0];
+    d.style.background = 'purple';
+    d.style.color = 'white';
+    d.innerText = 'Resposta: getElementsByClassName()';
+
+    // PEGANDO ELEMENTOS DOM PELO SELETOR - queryselector() ou queryselectorAll()
+    var d = window.document.querySelector('div#msg');
+    d.style.background = 'white';
+    d.style.color = 'blue';
+    d.innerText = 'Resposta: queryselector()';
+    
+
+
 </script>
+
+
 </body>
 </html>

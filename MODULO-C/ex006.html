@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>    
+    <style>
+        div#a{
+            background-color: #1db11d;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            font-size: 16pt;;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="a" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> -->
+    <div id="a" >
+        Interaja...
+    </div>
+    <script>
+        //Eventos em DOM é tudo que pode acontecer com o elemento. No nosso exemplo o elemento é uma DIV
+        // Todos os eventos DOM: https://developer.mozilla.org/pt-BR/docs/Web/Events
+        // Funções blocos de código que são executados quando chamados por um evento
+    
+        var a = window.document.getElementById('a'); // global
+
+        // Usando EventsListeners para chamar as ações (ao invés de chamar lá na div):
+        a.addEventListener('click', clicar);
+        a.addEventListener('mouseenter', entrar);
+        a.addEventListener('mouseout', sair);
+
+        function clicar() {            
+            a.innerText = 'Clicou!';
+            a.style.background = 'red';
+        }
+        function entrar(){
+            a.innerText = 'Entrou!';
+            a.style.background = '#1db11d';
+        }
+        function sair(){
+            a.innerText = 'Saiu!';         
+            a.style.background = '#1db11d';   
+        }
+
+        // parei aqui: video em 20min
+
+    </script>
+</body>
+</html>
