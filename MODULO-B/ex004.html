@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font: normal 20pt Arial;
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+
+    
+
+<script>
+    var nome = prompt('Informe seu nome:');
+    document.write(`Seu nome tem <strong>${nome.length}</strong> letras.<br>`);
+    document.write(`Seu nome em maiúsculas é: ${nome.toUpperCase()}.<br>`);
+    document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}.<br><hr>`);
+    
+    // fixando casas decimais no float: x.toFixed(2);
+    var valor1 = 1250.5;    
+    document.write(`Valor com 2 casas decimais fixas: ${valor1.toFixed(2)}.<br>`);
+    // com vírgulas:
+    document.write(`Valor com 2 casas decimais fixas com vírgula: ${valor1.toFixed(2).replace('.',',')}.<br>`);
+
+    // MACETE!! converter valores para moedas de países:
+    // n1.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})
+    document.write(`Valor convertido para moeda: ${valor1.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})} <br><hr>`);
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
