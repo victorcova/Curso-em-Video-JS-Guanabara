@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
+
+body{
+    font-family: Rubik;
+    background-color: rgb(70, 142, 236);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+    font-family: Rubik;
+    text-transform: uppercase;
+}
+
+section{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.200);
+}
+
+div{
+    padding: 8px;
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+select{
+    width: 443px;    
+    height: 190px;
+    font-family: Rubik;    
+    border: 1px dotted darkcyan;
+    border-radius: 5px;
+    color: darkcyan;
+    padding: 10px;    
+    overflow: hidden;
+}
+
+input{
+    font-family: Rubik;
+    border-radius: 5px;
+    color: darkblue;
+    padding: 10px;       
+}
+
+#res{
+    background-color: lightskyblue;
+    border: 1px dotted gray;
+    border-radius: 4px;
+    padding: 10px 10px 10px 10px;
+    color: darkslategrey;
+    margin-top: 20px;
+    font-size: 14pt;
+}
