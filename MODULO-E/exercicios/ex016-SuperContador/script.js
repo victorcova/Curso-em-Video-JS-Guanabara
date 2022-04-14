@@ -8,7 +8,7 @@ function contar() {
     var fim = Number(document.getElementById('fim').value);
     var passo = Number(document.getElementById('passo').value);
     var res = document.querySelector('div#res');
-
+ 
     if(ini == '' || fim == ''){
         res.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> O <strong>início</strong> ou o <strong>fim</strong> não foram definidos`;     
         res.style.color = 'red';
