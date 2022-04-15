@@ -21,8 +21,10 @@ function addNumeros() {
         let option = document.createElement('option');
         option.setAttribute('id',`numAdd-${numUser}`);
         option.innerHTML = `Valor ${numUser} adicionado.`;
-        select.appendChild(option);
-    }        
+        select.appendChild(option);        
+    }   
+    document.getElementById('txtNum').value = "";
+    document.getElementById('txtNum').focus();
 }
 
 function analisarNums() {
